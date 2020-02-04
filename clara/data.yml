@@ -1,0 +1,37 @@
+io-services:
+  reader:
+    class: org.jlab.clas.std.services.convertors.HipoToHipoReader
+    name: HipoToHipoReader
+  writer:
+    class: org.jlab.clas.std.services.convertors.HipoToHipoWriter
+    name: HipoToHipoWriter
+services:
+  - class: org.jlab.clas.swimtools.MagFieldsEngine
+    name: MAGFIELDS
+  - class: org.jlab.rec.cvt.services.CVTReconstruction
+    name: CVT
+
+configuration:
+  services:
+    MAGFIELDS:
+      magfieldSolenoidMap: Symm_solenoid_r601_phi1_z1201_13June2018.dat
+      magfieldTorusMap: Full_torus_r251_phi181_z251_08May2018.dat
+      variation: rga_spring2018
+      #variation: rga_fall2018
+    CVT:
+      variation: rga_spring2018
+      alignmentVariation: rga_spring2018
+      WithAlignment: "true"
+      FromTargetToCTOF: "false"
+      
+  io-services:
+    reader:
+      system: /tmp/clara-et-system
+      host: localhost
+      port: 11111
+      torus: -1.0
+      solenoid: -1.0
+    writer:
+      compression: 2
+mime-types:
+  - binary/data-hipo

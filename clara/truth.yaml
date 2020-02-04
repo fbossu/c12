@@ -1,0 +1,23 @@
+io-services:
+  reader:
+    class: org.jlab.clas.std.services.convertors.HipoToHipoReader
+    name: HipoToHipoReader
+  writer:
+    class: org.jlab.clas.std.services.convertors.HipoToHipoWriter
+    name: HipoToHipoWriter
+services:
+  - class: org.jlab.service.mc.TruthMatching
+    name: TRUTHMATCH
+
+configuration:
+  io-services:
+    reader:
+      system: /tmp/clara-et-system
+      host: localhost
+      port: 11111
+      torus: -1.0
+      solenoid: -1.0
+    writer:
+      compression: 2
+mime-types:
+  - binary/data-hipo

@@ -1,0 +1,12 @@
+set servicesFile /u/home/fbossu/Macros/clara/truth.yaml
+set fileList files.txt
+set inputDir .
+set outputDir .
+set outputFilePrefix out_
+set logDir .
+set session fbossu
+set description clara
+set threads 1
+set reportEvents 1
+set maxEvents 100
+run local

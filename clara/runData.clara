@@ -1,0 +1,12 @@
+set servicesFile /u/home/fbossu/Macros/clara/data.yml
+set fileList files.txt
+set inputDir .
+set outputDir .
+set outputFilePrefix out_
+set logDir .
+set session fbossu
+set description clara
+set threads 1
+set maxEvents 5000
+set reportEvents 1
+run local
