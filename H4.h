@@ -162,7 +162,6 @@ public:
 
     path   = getFloat( "pathlength", i );
 
-  }
 
     cov_d02 = getFloat("cov_d02",i);
     cov_d0phi0 = getFloat("cov_d0phi0",i);
@@ -245,6 +244,26 @@ class Cross : public Bank {
 
 
 
+class Hit : public Bank {
+
+  public:
+    Hit( std::string s, hipo::dictionary d) : Bank(s,d) {} ;
+    void get( int i ){
+      sector    = getInt( "sector", i );
+      layer     = getInt( "layer", i );
+      component = getInt( "component", i );
+      ADC       = getInt( "ADC", i );
+      time      = getFloat( "time", i );
+      integral  = getInt( "integral", i );
+    }
+    int sector;
+    int layer;
+    int component;
+    int ADC;
+    float time;
+    int integral;
+};
+
 
 class Cls : public Bank {
 
@@ -261,6 +280,7 @@ class Cls : public Bank {
       Tmin = getFloat( "Tmin", i );
       Tmax = getFloat( "Tmax", i );
     }
+    int id;
     int sector;
     int layer;
     int size;

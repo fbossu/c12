@@ -2,8 +2,9 @@
 
 ROOT := $(shell root-config --cflags) $(shell root-config --libs) -lEG
 
-HIPO4 := /home/fbossu/software/Clas12/hipo/hipo4
-HIPO3 := /home/fbossu/software/Clas12Tool/Hipo3
+HIPO4 := $(HIPO)/hipo4
+#HIPO4 := /home/fbossu/software/Clas12/hipo/hipo4
+#HIPO3 := /home/fbossu/software/Clas12Tool/Hipo3
 
 INCHIPO4 := $(HIPO4)
 INCHIPO3 := $(HIPO3)
